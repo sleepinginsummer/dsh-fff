@@ -1,5 +1,7 @@
 # dsh-fff
 
+[![npm version](https://img.shields.io/npm/v/dsh-fff.svg)](https://www.npmjs.com/package/dsh-fff)
+
 模糊文件查找 + 索引内容搜索——DSH 插件，移植自 Pi Coding Agent 生态的 [pi-fff](https://github.com/denisshepelin/pi-fff)（FFF = fast fuzzy finder）。
 
 ## 功能
