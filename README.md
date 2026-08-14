@@ -19,10 +19,11 @@
 
 ## 安装
 
-- **npm bundle（官方标准分发）**：发布到 npm 后 `dsh plugin --profile <name> add dsh-fff`（包声明 `dsh.bundle`，安装时自动加入 bundle 层）。
-- **动态插件**：`cordis_define`（`code.host` = `src/host.js` 逐字）→ `cordis_run`。
-- **静态挂载**：`index.js` 以普通 Node 模块加载同一函数体（内含 harness/staticDefineTool 双模式适配）；部署位置 `~/.dsh/profiles/web/plugins/dsh-fff/` + `cordis.patch.yml` insert 行。
-- 插件声明 `inject: ['fs', 'tools', 'systemPrompt', 'subprocess']`，静态加载时等这些服务就绪后才 apply。
+```bash
+dsh plugin --profile <name> add dsh-fff
+```
+
+安装后重启 DSH，`find_files` / `resolve_file` / `related_files` / `fff_grep` 对所有会话生效（`fff_grep` 需要本机装有 ripgrep）。
 
 ## 开发
 
