@@ -6,7 +6,7 @@
 
 | 工具 | 说明 |
 |---|---|
-| `find_files` | 模糊路径搜索（子序列打分：basename 优先、连续片段加分、目录段弱匹配），返回排序路径列表 |
+| `find_files` | 模糊路径搜索（**fzf 风格多 token**：空格分隔、每个 token 必须命中；basename 计双倍、目录段计半，连续片段加分），返回排序路径列表 |
 | `resolve_file` | 模糊引用 → 单个精确路径（并列给出 runner-up，暴露歧义），结果可直接喂给 read/replace |
 | `related_files` | 相关文件：同 stem（`.test.ts`/`.spec.ts`/实现配对）→ 同目录 → 兄弟目录 |
 | `fff_grep` | ripgrep 内容搜索（regex/字面量、模糊 scope、glob 过滤），结果按文件分组带计数 |
@@ -24,7 +24,7 @@
 ## 开发
 
 ```bash
-npm test   # 14 用例：子序列打分、basename/目录权重、排序/截断、相关文件、搜索结果分组、静态求值、工具注册
+npm test   # 15 用例：子序列打分、多 token、basename/目录权重、排序/截断、相关文件、搜索结果分组、静态求值、工具注册
 ```
 
 ## 与 pi-fff 的差异
