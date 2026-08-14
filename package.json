@@ -1,0 +1,12 @@
+{
+  "name": "dsh-fff",
+  "version": "0.1.0",
+  "description": "Fuzzy file finding and indexed content search for DSH: find_files / resolve_file / related_files / fff_grep. Pure-JS path index + subsequence scoring (no native dependencies). Port of pi-fff for the Pi coding agent.",
+  "license": "MIT",
+  "private": true,
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test test/"
+  }
+}
